@@ -1,0 +1,110 @@
+<template>
+  <section class="bg-yellow-500 min-h-screen flex items-center justify-center">
+    <article class="bg-red-600 w-[400px] h-[600px]">
+      <div class="container mx-auto px-8">
+        <div class="bg-red-100 w-full h-20 mt-8"></div>
+        <main class="grid gap-4 mt-4">
+          <div class="grid grid-cols-4 items-center gap-4">
+            <button class="bg-black text-white p-4">MC</button>
+            <button class="bg-black text-white p-4">M+</button>
+            <button class="bg-black text-white p-4">/</button>
+            <button class="bg-black text-white p-4">X</button>
+          </div>
+          <div class="grid grid-cols-4 items-center gap-4">
+            <button class="bg-black text-white p-4">7</button>
+            <button class="bg-black text-white p-4">8</button>
+            <button class="bg-black text-white p-4">9</button>
+            <button class="bg-black text-white p-4">-</button>
+          </div>
+          <div class="grid grid-cols-4 items-center gap-4">
+            <button class="bg-black text-white p-4">4</button>
+            <button class="bg-black text-white p-4">5</button>
+            <button class="bg-black text-white p-4">6</button>
+            <button class="bg-black text-white p-4">+</button>
+          </div>
+
+          <div class="grid-cols-4 grid gap-4">
+            <div class="col-span-3 grid grid-cols-3 items-center gap-4">
+              <button
+                ref="numbers"
+                data-letter="1"
+                class="number bg-black text-white p-4"
+              >
+                1
+              </button>
+              <button
+                ref="numbers"
+                data-letter="2"
+                class="number bg-black text-white p-4"
+              >
+                2
+              </button>
+              <button
+                ref="numbers"
+                data-letter="3"
+                class="number bg-black text-white p-4"
+              >
+                3
+              </button>
+              <button class="bg-black text-white col-span-2 p-4">0</button>
+              <button class="bg-black text-white p-4">.</button>
+            </div>
+
+            <div class="bg-white">
+              <div class="grid items-center gap-4 h-full">
+                <button class="bg-black text-white p-4 h-full">=</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </article>
+  </section>
+</template>
+<script setup>
+import { ref } from "vue";
+
+const numbers = ref();
+
+const nums = document.getElementsByClassName(".number");
+
+console.log(nums);
+
+const calculatorButtons = [
+  {
+    value: 1,
+    name: "1",
+    type: "numbers",
+  },
+
+  {
+    value: 2,
+    name: "2",
+    type: "numbers",
+  },
+
+  {
+    value: 3,
+    name: "3",
+    type: "numbers",
+  },
+
+  {
+    value: 4,
+    name: "4",
+    type: "numbers",
+  },
+
+  {
+    value: 5,
+    name: "5",
+    type: "numbers",
+  },
+
+  {
+    value: 6,
+    name: "6",
+    type: "numbers",
+  },
+];
+</script>
